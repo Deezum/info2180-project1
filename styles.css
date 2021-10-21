@@ -1,15 +1,20 @@
 /* Add your CSS to this file */
 body {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",Roboto, "Helvitca Neue", Arial, "Noto Sans", sans-serif;
 }
 
 .container {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
+}
+
+h1{ 
+    display: flexbox;
+    float: left;
     font-size: 18px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",Roboto, "Helvitca Neue", Arial, "Noto Sans", sans-serif;
 }
 
 header{
@@ -19,7 +24,6 @@ header{
     padding: 1px;
     border: 1px;
     margin: 1px;
-    
 } 
 
 header div{
@@ -28,41 +32,36 @@ header div{
     justify-content: space-around; 
 }
 
-div h1{
-    justify-content: flex-start;
-    
-}
+
 
 div nav{
     justify-content: flex-end;
 }
 
-nav u1{
+ul{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    float: right;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: right;
+    gap: 12px; 
 }
 
-nav li{
-    float: left;
-    list-style: none;
-    margin: 5px;
-    padding: 5px;
-    
-}
-
-header a:link{
+li a{
     color: #6b7280;
+    text-decoration: none; 
 }
 
-header a:hover{
+li a:hover{
     color:#5A67D8 ;
 }
+
+
 .overview-hero{
     background-color: #E2E8F0; 
-    padding: 15px; 
-    padding-top: 1px;
-    padding-bottom: 45px;
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 
 .overview-hero.container{
@@ -73,9 +72,9 @@ header a:hover{
 
 .overview-hero-image img{
     display: block;
-    width: 41%;
-    padding: 50px;
+    width: 50%;
     float: left;
+    margin-right: 50px;
     
     
 }
@@ -88,10 +87,6 @@ header a:hover{
     word-wrap: break-word; 
 }
 
-.learn-about.container{
-    display: grid;
-    justify-content: space-between;
-}
 
 .learn-about{
     margin: 10px;
@@ -110,15 +105,23 @@ header a:hover{
     
 }
 
-.card{
-    border-radius: 5px;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
-    padding: 20px;
-    margin: 20px;
-    grid-template-columns: 1fr 1 fr 1fr ;
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     
 }
 
+.card{
+    display: grid;
+    border-radius: 5px;
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+    border-right: 1px solid #E2E8F0;
+    border-left: 1px solid #E2E8F0;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 20px;
+}
 .learn-about img{
     width: 50%;
     border-radius: 5px 5px 5px 5px ;
@@ -132,31 +135,35 @@ header a:hover{
 .testing{
     background-color: #4A5568;
     color: white;
-    padding: 40px;
+    padding-top: 70px;
+    padding-bottom: 300px;
     margin: 1px;
     
 }
 
-.testing.container{
-    display: grid;
-    grid-template-columns: 60% 40%;
+.testing-desciption{
+    float: left;
+    width: 60%;
 }
 
-.testing-description{
-    float: left;
-    width: 50%;
-}
 
 .cta{
     float: right;
-    background-color: #48BB78 ;
+    padding: 80px 75px 50px 85px;
     border-radius: 5px;
 }
 
-.cta a{
+.cta .btn{
+    display: grid;
+    padding-top: 28px;
+    padding-left: 31px;
+    padding-right: 31px;
+    padding-bottom: 30px;
+    border-radius: 5px;
     color: white;
-    text-decoration: none;
-    padding: 20px;
+    float: right;
+    text-decoration: none;   
+    background-color: #48BB78;
     
 }
 
@@ -189,26 +196,37 @@ header a:hover{
     margin: 20px;
 }
 
+.article-body a{
+    color:  #5A67D8;
+    text-decoration: none;
+}
+
 .newsletter{
     background-color: #48BB78;
     color: white;
     padding: 50px;
 }
 
-.newsletter.container{
+.newsletter h3:nth-child(1){
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+}
+
+.newsletter p{
+    display: flex;
+    width: 500px;
+    padding-left: 240px;
     justify-content: center;
    
 }
 
-.newsletter.btn{
+.btn{
     background-color: #5A67D8;
     color: white;
     border-radius: 5px;
     border: none;
     text-decoration: none;
+    box-shadow: none;
     
 }
 
@@ -219,9 +237,10 @@ header a:hover{
 
 form {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     margin: 10px;
     padding: 10px;
+    gap: 10px;
   }
   
 input[type="email"]{
